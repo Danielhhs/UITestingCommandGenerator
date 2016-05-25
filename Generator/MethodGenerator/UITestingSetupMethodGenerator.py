@@ -1,4 +1,4 @@
-from CommandGenerator.UITestingCommandGenerator.MethodGenerator.UITestingMethodGenerator import UITestingMethodGenerator
+from Generator.MethodGenerator.UITestingMethodGenerator import UITestingMethodGenerator
 
 __author__ = 'huanghongsen'
 

@@ -1,8 +1,10 @@
+from Generator.MethodGenerator.UITestingSetupMethodGenerator import UITestingSetupMethodGenerator
+from Generator.MethodGenerator.UITestingTearDownMethodGenerator import UITestingTearDownMethodGenerator
+
 __author__ = 'huanghongsen'
 import os
 from string import Template
-from CommandGenerator.UITestingCommandGenerator.MethodGenerator.UITestingSetupMethodGenerator import UITestingSetupMethodGenerator
-from CommandGenerator.UITestingCommandGenerator.MethodGenerator.UITestingTearDownMethodGenerator import UITestingTearDownMethodGenerator
+
 
 class MSITestCaseGenerator:
     def __init__(self):

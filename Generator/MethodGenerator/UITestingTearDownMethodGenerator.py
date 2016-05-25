@@ -1,5 +1,7 @@
-from CommandGenerator.UITestingCommandGenerator.MethodGenerator.UITestingMethodGenerator import UITestingMethodGenerator
 from string import Template
+
+from Generator.MethodGenerator.UITestingMethodGenerator import UITestingMethodGenerator
+
 __author__ = 'huanghongsen'
 
 import StringConstants
