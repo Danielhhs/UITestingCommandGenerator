@@ -3,13 +3,14 @@ __author__ = 'huanghongsen'
 import StringConstants
 
 class UITestingMethodGenerator:
-    def __init__(self):
+    def __init__(self, testcase):
         self.isOverride = False
         self.methodName = ""
         self.parameters = []
         self.callSuper = False
         self.callSuperBeforeSelf = False
         self.methodBody = ""
+        self.testcase = testcase
 
     def generate(self):
         if (self.isOverride):

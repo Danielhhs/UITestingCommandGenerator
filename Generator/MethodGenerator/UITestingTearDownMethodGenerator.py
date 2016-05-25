@@ -7,20 +7,19 @@ __author__ = 'huanghongsen'
 import StringConstants
 
 class UITestingTearDownMethodGenerator(UITestingMethodGenerator):
-    def __init__(self):
+    def __init__(self, testcase):
+        UITestingMethodGenerator.__init__(self, testcase)
         self.isOverride = True
         self.callSuper = True
         self.callSuperBeforeSelf = False
         self.methodName = "tearDown"
-        self.methodBody = ""
-        self.testcaseName = ""
 
     def generateSelfImplementation(self):
         writeScreenShotTemplate = Template("writeScreenshotLog( XCTest.SupportAction.Tap, \"$testcasename-end-action\", \"TearDown\")")
-        self.methodBody += writeScreenShotTemplate.safe_substitute(testcasename = self.testcaseName)
+        self.methodBody += writeScreenShotTemplate.safe_substitute(testcasename = self.testcase)
         self.methodBody += StringConstants.LINE_BREAK
 
-generator = UITestingTearDownMethodGenerator()
-generator.generate()
-print generator.methodBody
+# generator = UITestingTearDownMethodGenerator()
+# generator.generate()
+# print generator.methodBody
 

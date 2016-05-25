@@ -1,5 +1,6 @@
 class MSITestCommand:
     def __init__(self):
+        self.comments = ""
         self.commandName = ""
         self.commandArgs = []
 

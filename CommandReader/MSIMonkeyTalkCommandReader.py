@@ -10,13 +10,14 @@ class MSIMonkeyTalkCommandReader(MSICommandReader):
         current_path = os.path.dirname(__file__)
         abs_file_path = os.path.join(current_path, filename)
         root = xml.etree.ElementTree.parse(abs_file_path).getroot()
-        self.getCommandsFromRoot(root)
+        return self.getCommandsFromRoot(root)
 
     def getCommandsFromRoot(self, root):
         commandsArray = root.iter('dict')
         testCommands = []
         for command in commandsArray:
             testCommands.append(self.getCommandInfoFromCommand(command))
+        return testCommands
 
     def getCommandInfoFromCommand(self, command):
         argsKeyFound = False
@@ -28,6 +29,10 @@ class MSIMonkeyTalkCommandReader(MSICommandReader):
                 argsKeyFound = False
             elif commandKeyFound == True:
                 testCommand.commandName = child.text
+                if child.text == 'Screenshot':
+                    testCommand.commandArgs.append(self.currentAction)
+                else:
+                    self.currentAction = child.text
                 commandKeyFound = False
             elif child.text == "args":
                 argsKeyFound = True
@@ -48,10 +53,6 @@ class MSIMonkeyTalkCommandReader(MSICommandReader):
         return "MSIMonkeyTalkCommandReader"
 
 
-def printElement(element):
-    print element
-    for child in element:
-        printElement(child)
 
-reader = MSIMonkeyTalkCommandReader()
-root = reader.readCommandFromFile("../scripts/Basic.xml")
+# reader = MSIMonkeyTalkCommandReader()
+# root = reader.readCommandFromFile("../scripts/Basic.xml")
