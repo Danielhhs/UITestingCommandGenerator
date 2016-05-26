@@ -8,8 +8,9 @@ import string
 class UITestingBrowseInCommandGenerator(UITestingCommandGenerator):
     def __init__(self, command):
         UITestingCommandGenerator.__init__(self, command)
-        self.template = "Folder.browseIn(\"$folderpath\", test: self)\n"
+        self.template = "//$comments\nFolder.browseIn(\"$folderpath\", test: self)\n\n"
         self.folderPath = ""
+        self.comments = "Browse In Folder"
 
     def generate(self):
         self.convertFolderPath()
@@ -17,7 +18,7 @@ class UITestingBrowseInCommandGenerator(UITestingCommandGenerator):
             self.commandBody += "//"
             self.commandBody += self.command.comments
             self.commandBody += "\n"
-        self.commandBody += Template(self.template).safe_substitute(folderpath=self.folderPath)
+        self.commandBody += Template(self.template).safe_substitute(comments = self.comments, folderpath=self.folderPath)
 
     def convertFolderPath(self):
         originalPath = self.command.commandArgs[0]

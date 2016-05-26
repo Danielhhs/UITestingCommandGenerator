@@ -12,7 +12,7 @@ def findLaunchURLFromCommands(commands):
     return launchURL
 
 reader = MSIMonkeyTalkCommandReader()
-commands = reader.readCommandFromFile("../scripts/Settings.xml")
+commands = reader.readCommandFromFile("../scripts/Transaction_Viewer.xml")
 
 launchURL = findLaunchURLFromCommands(commands)
 

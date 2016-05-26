@@ -8,14 +8,14 @@ from string import Template
 class UITestingScreenShotCommandGenerator(UITestingCommandGenerator):
     def __init__(self, command):
         UITestingCommandGenerator.__init__(self, command)
-        self.template = "writeScreenshotLog(XCTest.SupportAction.$action, \"$actionname\", \"$targetfilename\")"
+        self.template = "writeScreenshotLog(XCTest.SupportAction.$action, \"$actionname\", \"$targetfilename\")\n"
 
     def generate(self):
         self.commandBody = Template(self.template).safe_substitute(action = self.actionFromActionName(self.command.commandArgs[1]), actionname = self.command.commandArgs[1], targetfilename=self.command.commandArgs[0])
         self.commandBody += StringConstants.LINE_BREAK
 
     def actionFromActionName(self, actionName):
-        if actionName == 'Tap':
+        if actionName == 'Tap' or actionName == 'Switch':
             return "Tap"
         elif actionName == 'BrowseIn':
             return "OpenDocument"

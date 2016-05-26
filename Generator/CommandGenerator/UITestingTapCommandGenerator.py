@@ -10,4 +10,6 @@ class UITestingTapCommandGenerator(UITestingCommandGenerator):
         self.template = "ToolUtils.verifyAppear(.Any, iden: \"$targetID\", test: self)\nToolUtils.elementIdQuery(\"$targetID\").element.tap()\n"
 
     def generate(self):
+        if len(self.command.commandTarget) == 0 and self.command.targetClass == "UIDimmingView":
+            self.command.commandTarget = "dismiss popup"
         self.commandBody = Template(self.template).safe_substitute(targetID = self.command.commandTarget)

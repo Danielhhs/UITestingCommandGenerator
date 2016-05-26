@@ -23,6 +23,7 @@ class MSIMonkeyTalkCommandReader(MSICommandReader):
         argsKeyFound = False
         commandKeyFound = False
         actionTargetFound = False
+        targetClassFound = False
         testCommand = MSITestCommand()
         for child in command.iter():
             if argsKeyFound == True:
@@ -42,6 +43,11 @@ class MSIMonkeyTalkCommandReader(MSICommandReader):
                     testCommand.commandTarget = child.text
                 actionTargetFound = False
 
+            elif targetClassFound == True:
+                if child.text != None:
+                    testCommand.targetClass = child.text
+                targetClassFound = False
+
             elif child.text == "args":
                 argsKeyFound = True
 
@@ -50,6 +56,9 @@ class MSIMonkeyTalkCommandReader(MSICommandReader):
 
             elif child.text == "monkeyID":
                 actionTargetFound = True
+
+            elif child.text == "className":
+                targetClassFound = True
 
         print testCommand
         return testCommand

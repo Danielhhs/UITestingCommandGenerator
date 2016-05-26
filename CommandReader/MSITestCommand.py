@@ -4,6 +4,7 @@ class MSITestCommand:
         self.commandName = ""
         self.commandArgs = []
         self.commandTarget = ""
+        self.targetClass = ""
 
     def __str__(self):
         desc = "commandName : " + self.commandName + "\n" + "commandArgs: "
@@ -14,5 +15,9 @@ class MSITestCommand:
             desc += "\n"
             desc += "commandTarget: "
             desc += self.commandTarget
+        if len(self.targetClass) > 0:
+            desc += "\n"
+            desc += "targetClass: "
+            desc += self.targetClass
         desc += "\n"
         return desc

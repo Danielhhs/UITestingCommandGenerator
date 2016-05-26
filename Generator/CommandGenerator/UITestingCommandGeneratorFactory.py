@@ -4,6 +4,8 @@ from Generator.CommandGenerator.UITestingCommandGenerator import UITestingComman
 from Generator.CommandGenerator.UITestingScreenShotCommandGenerator import UITestingScreenShotCommandGenerator
 from Generator.CommandGenerator.UITestingBrowseInCommandGenerator import UITestingBrowseInCommandGenerator
 from Generator.CommandGenerator.UITestingTapCommandGenerator import UITestingTapCommandGenerator
+from Generator.CommandGenerator.UITestingSwitchCommandGenerator import UITestingSwitchCommandGenerator
+from Generator.CommandGenerator.UITestingCalendarControlCommandGenerator import UITestingCalendarControlCommandGenerator
 
 from CommandReader.MSITestCommand import MSITestCommand
 
@@ -17,5 +19,9 @@ class UITestingCommandGeneratorFactory:
             return UITestingScreenShotCommandGenerator(command)
         elif commandName == 'Tap':
             return UITestingTapCommandGenerator(command)
+        elif commandName == 'Switch':
+            return UITestingSwitchCommandGenerator(command)
+        elif commandName == 'EnterDate':
+            return UITestingCalendarControlCommandGenerator(command)
         else:
             return UITestingCommandGenerator(command)
