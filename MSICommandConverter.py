@@ -12,11 +12,11 @@ def findLaunchURLFromCommands(commands):
     return launchURL
 
 reader = MSIMonkeyTalkCommandReader()
-commands = reader.readCommandFromFile("../scripts/Basic.xml")
+commands = reader.readCommandFromFile("../scripts/Settings.xml")
 
 launchURL = findLaunchURLFromCommands(commands)
 
-generator = MSITestCaseGenerator("FolderBrowsing", "testFolderBrowsing", "/Users/huanghongsen/Desktop", commands)
+generator = MSITestCaseGenerator("Settings", "testSettings", "/Users/huanghongsen/Desktop", commands)
 generator.launchURL = launchURL
 generator.generate()
 generator.writeToOutputPath()

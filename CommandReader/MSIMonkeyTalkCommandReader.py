@@ -22,11 +22,13 @@ class MSIMonkeyTalkCommandReader(MSICommandReader):
     def getCommandInfoFromCommand(self, command):
         argsKeyFound = False
         commandKeyFound = False
+        actionTargetFound = False
         testCommand = MSITestCommand()
         for child in command.iter():
             if argsKeyFound == True:
                 testCommand.commandArgs = self.getArrayTextFromElementArray(child)
                 argsKeyFound = False
+
             elif commandKeyFound == True:
                 testCommand.commandName = child.text
                 if child.text == 'Screenshot':
@@ -34,10 +36,20 @@ class MSIMonkeyTalkCommandReader(MSICommandReader):
                 else:
                     self.currentAction = child.text
                 commandKeyFound = False
+
+            elif actionTargetFound == True:
+                if child.text != None:
+                    testCommand.commandTarget = child.text
+                actionTargetFound = False
+
             elif child.text == "args":
                 argsKeyFound = True
+
             elif child.text == "command":
                 commandKeyFound = True
+
+            elif child.text == "monkeyID":
+                actionTargetFound = True
 
         print testCommand
         return testCommand
