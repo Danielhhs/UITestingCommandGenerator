@@ -16,7 +16,9 @@ class MSIMonkeyTalkCommandReader(MSICommandReader):
         commandsArray = root.iter('dict')
         testCommands = []
         for command in commandsArray:
-            testCommands.append(self.getCommandInfoFromCommand(command))
+            populatedCommand = self.getCommandInfoFromCommand(command)
+            testCommands.append(populatedCommand)
+            self.previousCommand = populatedCommand
         return testCommands
 
     def getCommandInfoFromCommand(self, command):
@@ -60,6 +62,12 @@ class MSIMonkeyTalkCommandReader(MSICommandReader):
             elif child.text == "className":
                 targetClassFound = True
 
+        if (testCommand.commandName == 'InputText'):
+            print 'here'
+        if testCommand.commandName == "InputText" and self.previousCommand.commandName == "Tap":
+            testCommand.commandArgs.append(self.previousCommand.commandTarget)
+        if testCommand.commandName == "Tap" and testCommand.targetClass == "UIButton" and self.previousCommand.commandName == "InputText":
+            self.previousCommand.commandArgs.append(testCommand.commandTarget)
         print testCommand
         return testCommand
 

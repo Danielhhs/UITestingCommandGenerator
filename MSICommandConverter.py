@@ -16,7 +16,7 @@ commands = reader.readCommandFromFile("../scripts/Transaction_Viewer.xml")
 
 launchURL = findLaunchURLFromCommands(commands)
 
-generator = MSITestCaseGenerator("Settings", "testSettings", "/Users/huanghongsen/Desktop", commands)
+generator = MSITestCaseGenerator("Transaction", "testTransaction", "/Users/huanghongsen/Desktop", commands)
 generator.launchURL = launchURL
 generator.generate()
 generator.writeToOutputPath()

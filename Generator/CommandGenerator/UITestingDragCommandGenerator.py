@@ -18,3 +18,4 @@ class UITestingDragCommandGenerator(UITestingCommandGenerator):
         targetValue = 0.5
         if len(self.command.commandArgs) == 1 and isinstance(self.command.commandArgs[0], numbers.Number):
             targetValue = self.command.commandArgs[0]
+        return targetValue
