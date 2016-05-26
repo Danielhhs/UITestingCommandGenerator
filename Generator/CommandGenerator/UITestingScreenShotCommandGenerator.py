@@ -15,7 +15,7 @@ class UITestingScreenShotCommandGenerator(UITestingCommandGenerator):
         self.commandBody += StringConstants.LINE_BREAK
 
     def actionFromActionName(self, actionName):
-        if actionName == 'Tap' or actionName == 'Switch':
+        if actionName == 'Tap' or actionName == 'Switch' or actionName == 'Drag':
             return "Tap"
         elif actionName == 'BrowseIn':
             return "OpenDocument"
