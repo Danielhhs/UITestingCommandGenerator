@@ -7,10 +7,7 @@ class UITestingDragCommandGenerator(UITestingCommandGenerator):
     def __init__(self, command):
         UITestingCommandGenerator.__init__(self, command)
         self.template = """//$comments
-            XCUIApplication().sliders.element.adjustToNormalizedSliderPosition($targetValue)
-            //dismiss Slider
-            ToolUtils.verifyAppear(.Any, iden: "dismiss popup", test: self)
-            ToolUtils.elementIdQuery("dismiss popup").element.tap()\n"""
+            XCUIApplication().sliders.element.adjustToNormalizedSliderPosition($targetValue)\n"""
         self.comments = "Update Slider Value"
 
     def generate(self):

@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="daa5017c-9671-4428-b701-3d3ceb4d8894" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Generator/CommandGenerator/UITestingDragCommandGenerator.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Generator/CommandGenerator/UITestingListSelectionCommandGenerator.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Generator/CommandGenerator/UITestingTimeControlCommandGenerator.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generator/CommandGenerator/UITestingCommandGeneratorFactory.py" afterPath="$PROJECT_DIR$/Generator/CommandGenerator/UITestingCommandGeneratorFactory.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generator/CommandGenerator/UITestingScreenShotCommandGenerator.py" afterPath="$PROJECT_DIR$/Generator/CommandGenerator/UITestingScreenShotCommandGenerator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generator/CommandGenerator/UITestingDragCommandGenerator.py" afterPath="$PROJECT_DIR$/Generator/CommandGenerator/UITestingDragCommandGenerator.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TestAutomation.iws" />
@@ -28,26 +29,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UITestingTestCaseMethodGenerator.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Generator/MethodGenerator/UITestingTestCaseMethodGenerator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="435">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MSIMonkeyTalkCommandReader.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CommandReader/MSIMonkeyTalkCommandReader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="393" max-vertical-offset="1215">
-              <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MSITestCommand.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CommandReader/MSITestCommand.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -95,10 +76,22 @@
       <file leaf-file-name="UITestingCommandGeneratorFactory.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Generator/CommandGenerator/UITestingCommandGeneratorFactory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
               <folding>
                 <element signature="e#29#119#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UITestingTimeControlCommandGenerator.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Generator/CommandGenerator/UITestingTimeControlCommandGenerator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="98" max-vertical-offset="765">
+              <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
+              <folding>
+                <element signature="e#28#118#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -129,10 +122,22 @@
       <file leaf-file-name="UITestingDragCommandGenerator.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Generator/CommandGenerator/UITestingDragCommandGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42519686" vertical-offset="0" max-vertical-offset="635">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.21259843" vertical-offset="0" max-vertical-offset="635">
+              <caret line="9" column="92" selection-start-line="9" selection-start-column="92" selection-end-line="9" selection-end-column="92" />
               <folding>
                 <element signature="e#28#118#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UITestingListSelectionCommandGenerator.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Generator/CommandGenerator/UITestingListSelectionCommandGenerator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+              <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+              <folding>
+                <element signature="e#29#119#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -165,15 +170,17 @@
         <option value="$PROJECT_DIR$/CommandReader/MSIMonkeyTalkCommandReader.py" />
         <option value="$PROJECT_DIR$/Generator/CommandGenerator/UITestingTapCommandGenerator.py" />
         <option value="$PROJECT_DIR$/Generator/CommandGenerator/UITestingCalendarControlCommandGenerator.py" />
-        <option value="$PROJECT_DIR$/Generator/CommandGenerator/UITestingCommandGeneratorFactory.py" />
-        <option value="$PROJECT_DIR$/Generator/CommandGenerator/UITestingDragCommandGenerator.py" />
         <option value="$PROJECT_DIR$/Generator/CommandGenerator/UITestingScreenShotCommandGenerator.py" />
+        <option value="$PROJECT_DIR$/Generator/CommandGenerator/UITestingListSelectionCommandGenerator.py" />
+        <option value="$PROJECT_DIR$/Generator/CommandGenerator/UITestingCommandGeneratorFactory.py" />
+        <option value="$PROJECT_DIR$/Generator/CommandGenerator/UITestingTimeControlCommandGenerator.py" />
+        <option value="$PROJECT_DIR$/Generator/CommandGenerator/UITestingDragCommandGenerator.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="991" />
-    <option name="y" value="252" />
+    <option name="x" value="765" />
+    <option name="y" value="246" />
     <option name="width" value="1638" />
     <option name="height" value="970" />
   </component>
@@ -575,7 +582,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="991" y="252" width="1638" height="970" extended-state="0" />
+    <frame x="765" y="246" width="1638" height="970" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -851,20 +858,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Generator/CommandGenerator/UITestingCommandGeneratorFactory.py">
+    <entry file="file://$PROJECT_DIR$/Generator/CommandGenerator/UITestingListSelectionCommandGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
           <folding>
             <element signature="e#29#119#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Generator/CommandGenerator/UITestingCommandGeneratorFactory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding>
+            <element signature="e#29#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Generator/CommandGenerator/UITestingTimeControlCommandGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="98" max-vertical-offset="765">
+          <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
+          <folding>
+            <element signature="e#28#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Generator/CommandGenerator/UITestingDragCommandGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42519686" vertical-offset="0" max-vertical-offset="635">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.21259843" vertical-offset="0" max-vertical-offset="635">
+          <caret line="9" column="92" selection-start-line="9" selection-start-column="92" selection-end-line="9" selection-end-column="92" />
           <folding>
             <element signature="e#28#118#0" expanded="true" />
           </folding>

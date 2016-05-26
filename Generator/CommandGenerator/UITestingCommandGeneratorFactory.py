@@ -7,7 +7,8 @@ from Generator.CommandGenerator.UITestingTapCommandGenerator import UITestingTap
 from Generator.CommandGenerator.UITestingSwitchCommandGenerator import UITestingSwitchCommandGenerator
 from Generator.CommandGenerator.UITestingCalendarControlCommandGenerator import UITestingCalendarControlCommandGenerator
 from Generator.CommandGenerator.UITestingDragCommandGenerator import UITestingDragCommandGenerator
-
+from Generator.CommandGenerator.UITestingListSelectionCommandGenerator import UITestingListSelectionCommandGenerator
+from Generator.CommandGenerator.UITestingTimeControlCommandGenerator import UITestingTimeControlCommandGenerator
 from CommandReader.MSITestCommand import MSITestCommand
 
 class UITestingCommandGeneratorFactory:
@@ -26,5 +27,9 @@ class UITestingCommandGeneratorFactory:
             return UITestingCalendarControlCommandGenerator(command)
         elif commandName == 'Drag':
             return UITestingDragCommandGenerator(command)
+        elif commandName == 'Select':
+            return UITestingListSelectionCommandGenerator(command)
+        elif commandName == 'EnterTime':
+            return UITestingTimeControlCommandGenerator(command)
         else:
             return UITestingCommandGenerator(command)
