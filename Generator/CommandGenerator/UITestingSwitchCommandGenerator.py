@@ -10,4 +10,10 @@ class UITestingSwitchCommandGenerator(UITestingCommandGenerator):
         self.comments = "Switch Button"
 
     def generate(self):
-        self.commandBody = Template(self.template).safe_substitute(comments = self.comments, targetID = self.command.commandTarget)
+        self.commandBody = Template(self.template).safe_substitute(comments = self.comments, targetID = self.getTargetID())
+
+    def getTargetID(self):
+        if len(self.command.commandTarget) > 0:
+            return self.command.commandTarget
+        else:
+            return self.command.commandArgs[0]

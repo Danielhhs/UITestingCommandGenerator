@@ -25,11 +25,11 @@ class UITestingBrowseInCommandGenerator(UITestingCommandGenerator):
         pathComponents = originalPath.split('\\')
         self.folderPath = string.join(pathComponents, '//')
 
-command = MSITestCommand()
-command.commandName = "BrowseIn"
-command.commandArgs = ['Shared Library\Transactions(SingleGridSource=False)\Test Suite\Data Input Control\Field+Grid']
-command.comments = "adsaasdfasgawrgaerw"
-generator = UITestingBrowseInCommandGenerator(command)
-generator.generate()
-print generator.commandBody
+# command = MSITestCommand()
+# command.commandName = "BrowseIn"
+# command.commandArgs = ['Shared Library\Transactions(SingleGridSource=False)\Test Suite\Data Input Control\Field+Grid']
+# command.comments = "adsaasdfasgawrgaerw"
+# generator = UITestingBrowseInCommandGenerator(command)
+# generator.generate()
+# print generator.commandBody
 

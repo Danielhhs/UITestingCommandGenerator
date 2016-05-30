@@ -6,10 +6,11 @@ from CommandReader.MSITestCommand import MSITestCommand
 
 class MSIMonkeyTalkCommandReader(MSICommandReader):
 
+    def __init__(self):
+        MSICommandReader.__init__(self)
+
     def readCommandFromFile(self, filename):
-        current_path = os.path.dirname(__file__)
-        abs_file_path = os.path.join(current_path, filename)
-        root = xml.etree.ElementTree.parse(abs_file_path).getroot()
+        root = xml.etree.ElementTree.parse(filename).getroot()
         return self.getCommandsFromRoot(root)
 
     def getCommandsFromRoot(self, root):
@@ -62,8 +63,6 @@ class MSIMonkeyTalkCommandReader(MSICommandReader):
             elif child.text == "className":
                 targetClassFound = True
 
-        if (testCommand.commandName == 'InputText'):
-            print 'here'
         if testCommand.commandName == "InputText" and self.previousCommand.commandName == "Tap":
             testCommand.commandArgs.append(self.previousCommand.commandTarget)
         if testCommand.commandName == "Tap" and testCommand.targetClass == "UIButton" and self.previousCommand.commandName == "InputText":
@@ -80,6 +79,14 @@ class MSIMonkeyTalkCommandReader(MSICommandReader):
 
     def __str__(self):
         return "MSIMonkeyTalkCommandReader"
+
+    def findLaunchURLFromCommands(self, commands):
+        launchURL = ""
+        for command in commands:
+            if command.commandName == 'ConfigServer':
+                launchURL = command.commandArgs[0]
+
+        return launchURL
 
 
 
